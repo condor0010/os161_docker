@@ -13,7 +13,9 @@ apt install wget\
 	texinfo\
 	gcc\
 	g++\
-	make -y
+	make\
+	vim\
+	tmux	-y
 
 # Create some directories and set the PATH
 mkdir -p $HOME/os161
