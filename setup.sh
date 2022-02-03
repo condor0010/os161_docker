@@ -168,4 +168,3 @@ cd ${HOME}/os161/root/
 disk161 create LHD0.img 25M
 disk161 create LHD1.img 25M
 
-workdir /root/os161/
