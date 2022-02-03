@@ -15,7 +15,8 @@ apt install wget\
 	g++\
 	make\
 	vim\
-	tmux	-y
+	tmux\
+	ssh -y
 
 # Create some directories and set the PATH
 mkdir -p $HOME/os161
@@ -28,7 +29,7 @@ export PATH=$HOME/os161/tools/bin:$PATH
 
 cd $HOME/os161/toolbuild
 
-wget http://www.eecs.harvard.edu/~dholland/os161/download/binutils-2.24+os161-2.1.tar.gz
+wget https://archive.org/download/gcc-4.8.3os161-2.1.tar/binutils-2.24%2Bos161-2.1.tar.gz
 tar -zxf binutils-2.24+os161-2.1.tar.gz
 
 cd binutils-2.24+os161-2.1
@@ -43,7 +44,7 @@ make install
 cd ..
 
 #Download, build, and install GCC-4.8
-wget http://www.eecs.harvard.edu/~dholland/os161/download/gcc-4.8.3+os161-2.1.tar.gz
+wget https://archive.org/download/gcc-4.8.3os161-2.1.tar/gcc-4.8.3%2Bos161-2.1.tar.gz
 tar -zxf gcc-4.8.3+os161-2.1.tar.gz
 cd gcc-4.8.3+os161-2.1
 
@@ -72,7 +73,7 @@ make install
 cd ..
 
 #Download, build, and install gdb 7.8
-wget http://www.eecs.harvard.edu/~dholland/os161/download/gdb-7.8+os161-2.1.tar.gz
+wget https://archive.org/download/gcc-4.8.3os161-2.1.tar/gdb-7.8%2Bos161-2.1.tar.gz
 tar -zxf gdb-7.8+os161-2.1.tar.gz
 
 cd gdb-7.8+os161-2.1
@@ -87,7 +88,7 @@ make install
 cd ..
 
 #Download, build, and install the simulator sys161-2.0.8 
-wget http://www.eecs.harvard.edu/~dholland/os161/download/sys161-2.0.8.tar.gz
+wget https://archive.org/download/gcc-4.8.3os161-2.1.tar/sys161-2.0.8.tar.gz
 tar -zxf sys161-2.0.8.tar.gz
 
 cd sys161-2.0.8
@@ -97,8 +98,8 @@ make install
 cd ..
 
 #Download, build, and install the simulator bmake 
-wget http://www.eecs.harvard.edu/~dholland/os161/download/bmake-20101215.tar.gz
-wget http://www.eecs.harvard.edu/~dholland/os161/download/mk-20100612.tar.gz
+wget https://archive.org/download/gcc-4.8.3os161-2.1.tar/bmake-20101215.tar.gz
+wget https://archive.org/download/gcc-4.8.3os161-2.1.tar/mk-20100612.tar.gz
 tar -zxf bmake-20101215.tar.gz
 cd bmake
 tar -zxf ../mk-20100612.tar.gz
@@ -128,8 +129,7 @@ mkdir -p $HOME/os161/root
 
 #Download the OS/161 source code:
 cd $HOME/os161/toolbuild/
-wget http://os161.eecs.harvard.edu/download/os161-base-2.0.3.tar.gz 
-
+wget https://archive.org/download/gcc-4.8.3os161-2.1.tar/os161-base-2.0.3.tar.gz
 #Extract the source files: 
 tar -zxf os161-base-2.0.3.tar.gz
 
@@ -168,5 +168,4 @@ cd ${HOME}/os161/root/
 disk161 create LHD0.img 25M
 disk161 create LHD1.img 25M
 
-echo "cd ${HOME}/os161/root/ " >> .bashrc
-
+workdir /root/os161/
