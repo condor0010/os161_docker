@@ -1,11 +1,14 @@
 #!/bin/bash
 
-# run updates
-apt update -y
-apt upgrade -y
+DEBIAN_FRONTEND=noninteractive
+apt-get update -y
+apt-get upgrade -y
+ln -fs /usr/share/zoneinfo/America/New_York /etc/localtime
+apt-get install -y tzdata
+dpkg-reconfigure --frontend noninteractive tzdata
 
 # get deps
-apt install wget\
+apt-get install wget\
 	libgmp-dev\
 	libmpfr-dev\
 	libmpc-dev\
