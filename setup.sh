@@ -19,7 +19,8 @@ apt-get install wget\
 	make\
 	vim\
 	tmux\
-	ssh -y
+	ssh\
+  git	-y
 
 # Create some directories and set the PATH
 mkdir -p $HOME/os161
