@@ -20,7 +20,13 @@ apt-get install wget\
 	vim\
 	tmux\
 	ssh\
-  git	-y
+  git\
+  nano\
+  emacs\
+  kakoune\
+  micro\
+  neovim\
+    -y
 
 # Create some directories and set the PATH
 mkdir -p $HOME/os161
