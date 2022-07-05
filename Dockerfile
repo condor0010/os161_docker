@@ -4,6 +4,5 @@ SHELL ["/bin/bash"]
 COPY setup.sh /root/
 COPY bos /bin/
 RUN /root/setup.sh
-ENTRYPOINT /bin/bash
 WORKDIR /root/os161/
 
